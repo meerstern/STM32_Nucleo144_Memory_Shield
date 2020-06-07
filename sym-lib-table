@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name NUCLEO-144)(type Legacy)(uri ${KIPRJMOD}/NUCLEO-144.lib)(options "")(descr ""))
+  (lib (name NAND_Flash)(type Legacy)(uri ${KIPRJMOD}/NAND_Flash.lib)(options "")(descr ""))
+  (lib (name SDRAM)(type Legacy)(uri ${KIPRJMOD}/SDRAM.lib)(options "")(descr ""))
+  (lib (name NOR_Flash)(type Legacy)(uri ${KIPRJMOD}/NOR_Flash.lib)(options "")(descr ""))
+  (lib (name SRAM)(type Legacy)(uri ${KIPRJMOD}/SRAM.lib)(options "")(descr ""))
+)

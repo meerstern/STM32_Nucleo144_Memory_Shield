@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name NUCLEO)(type KiCad)(uri ${KIPRJMOD}/NUCLEO.pretty)(options "")(descr ""))
+  (lib (name smd)(type KiCad)(uri ${KIPRJMOD}/smd.pretty)(options "")(descr ""))
+)

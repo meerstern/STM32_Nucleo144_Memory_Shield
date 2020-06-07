@@ -1,0 +1,85 @@
+
+(rules PCB ns
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 48231)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 152.0)
+    (clear 152.2)
+    (clear 76.0 (type smd_to_turn_gap))
+    (clear 38.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 152.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "/VDD_SDRAM1" "/VDD_SDRAM2" +3V3 "/VDD_SRAM1" "/VDD_SRAM2" "/VDD_NOR" "Net-(C22-Pad1)"
+    "/VDD_NAND" "Net-(A1-Pad16)" "Net-(R2-Pad2)" "Net-(R4-Pad2)" "Net-(R5-Pad2)" "Net-(A1-Pad5)" "/FMC_NE1" "/FMC_NE3"
+    "/FMC_NWAIT" "/FMC_NE4" "Net-(A6-Pad67)" "Net-(RX12-Pad2)" "Net-(RX13-Pad2)" "/FMC_D15" "/FMC_D14" "/FMC_D13"
+    "/FMC_D12" "/FMC_D11" "/FMC_D10" "/FMC_D9" "/FMC_D8" "/FMC_NBL1" "/FMC_SDCLK" "/FMC_SDCKE0"
+    "/FMC_A12" "/FMC_A11" "/FMC_A9" "/FMC_A8" "/FMC_A7" "/FMC_A6" "/FMC_A5" "/FMC_A4"
+    "/FMC_A3" "/FMC_A2" "/FMC_A1" "/FMC_A0" "/FMC_A10" "/FMC_A15" "/FMC_A14" "/FMC_SDNE0"
+    "/FMC_SDNRAS" "/FMC_SDNCAS" "/FMC_SDNWE" "/FMC_NBL0" "/FMC_D7" "/FMC_D6" "/FMC_D5" "/FMC_D4"
+    "/FMC_D3" "/FMC_D2" "/FMC_D1" "/FMC_D0" "/FMC_SDCKE1" "/FMC_SDNE1" "/FMC_NOE" "/FMC_A13"
+    "/FMC_A16" "/FMC_A17" "/FMC_A18" "/FMC_NWE" "/FMC_A21" "/FMC_A20" "/FMC_A19" "/FMC_A22"
+    "/FMC_A23" "/FMC_NCE"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 152.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

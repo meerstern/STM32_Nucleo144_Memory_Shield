@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SDRAM
+D  Synchronous DRAM (SDRAM), TSOP II 54pin
+F https://www.alliancememory.com/wp-content/uploads/pdf/dram/64M-AS4C4M16SA-CI_v3.0_March%202015.pdf
+$ENDCMP
+#
+#End Doc Library
